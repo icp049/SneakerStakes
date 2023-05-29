@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
+import Shoes from './Shoes';
+import Bet from './Bet';
 
 const HomePage = () => {
   return (
@@ -10,7 +12,7 @@ const HomePage = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/shoes">Sneakers</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
@@ -20,8 +22,10 @@ const HomePage = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/shoes" element={<Shoes />} />
+        <Route path="/bet" element={<bet />} />
+      
+       
       </Routes>
     </Router>
   );
@@ -31,12 +35,6 @@ const Home = () => {
   return <h1>Welcome to the Home page!</h1>;
 };
 
-const About = () => {
-  return <h1>About Us</h1>;
-};
 
-const Contact = () => {
-  return <h1>Contact Us</h1>;
-};
 
 export default HomePage;
